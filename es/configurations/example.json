@@ -1,0 +1,51 @@
+{
+  "config": {
+    "calc_obstat_prob": 0.1, // z jakim p-nstwem obserwacje z obecnego rollout'a zostana uzyte w obliczeniu statystyk rozkladu obserwacji
+                              // Obliczane sa (mean, std), statystyki te sluza do sprowadzenia rozkladu obserwacji do N(0,1)
+                              // (uzywane sa w normalizacji wejscia do sieci neuronowej)
+    "episodes_per_batch": 10, // maks. liczba epizodów na batch (jeden batch = jedna aktualizacja wag)
+    "eval_prob": 0.003, // p-nstwo, ze zadanie dla worker'a zostanie przeznaczone na samą ocenę modelu (a nie na treninig)
+    "l2coeff": 0.005, // istotność L_2 weight decay
+    "noise_stdev": 0.02, // odchylenie standardowe rozkładu populacji wag (\sigma z Algorithm 1 z bazowego artykułu)
+    "snapshot_freq": 20, // co ile wykonanych zadań (ewaluacji lub treningu) ma być zapisany snapshot modelu
+    "timesteps_per_batch": 2000, // maks. liczba kroków na batch (spełniony musi być ten parametr i episode_per_batch, żeby zakończyć batch)
+    "return_proc_mode": "centered_rank", // typ preprocessingu nagród, wykonywane przed uczeniem
+                                         // 'centered_rank': zamienia sumy nagród z epizodów na równomiernie rozłożone wartości z zakresu [-0.5,0.5]
+                                         // np. dla sum nagród z 5 epizodów [1.2,2.4,0.9,0.1,1.5]
+                                         // obliczamy rząd nagród (liczony od zera): [2,4,1,0,3]
+                                         // i centrujemy je (dzielimy przez 5-1, odejmujemy 0.5):
+                                         // [0,0.5,-0.25,-0.5,0.25]
+                                         // 'sign': suma znaków (-1,1) nagród z epizodu,
+                                         // np. gdy epizodzie otrzymano nagrody: [-0.2,3,-2] to nagroda = -1+1-1 = -1
+                                         // 'sign_centered_rank': obliczanie centered_rank na sumach znaków (a nie na sumie wartości)
+    "episode_cutoff_mode": "env_default" // w jaki sposób ma być określona maksymalna liczba kroków do wykonania w epizodzie;
+                                         // 'env_default': użyj max_timestep_limit ze środowiska
+                                         // 'adaptive a b c': zacznij od max_timestep_limit = a, i aktualizuj później używając param. b i c
+  },
+  "env_target": "osim.env.run:RunEnv",
+  "env_params": {
+    "visualize" : false,
+    "max_obstacles" : 10
+  },
+  "exp_prefix": "osim_run",
+  "optimizer": {
+    "args": {
+      "stepsize": 0.01
+    },
+    "type": "adam"
+  },
+  "policy": {
+    "args": {
+      "ac_bins": "continuous:",
+      "ac_noise_std": 0.01,
+      "connection_type": "ff", // fully connected, jedynie taka jest teraz obslugiwana
+      "hidden_dims": [
+        64,
+        64
+      ],
+      "nonlin_type": "tanh"
+    },
+    "type": "OsimRunnerPolicy"
+//, "init_from": "path_to_hd5_file with model weights"
+  }
+}

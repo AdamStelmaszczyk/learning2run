@@ -1,0 +1,38 @@
+{
+  "config": {
+    "calc_obstat_prob": 0.1,
+    "episodes_per_batch": 10,
+    "eval_prob": 0.2,
+    "l2coeff": 0.005,
+    "noise_stdev": 0.02,
+    "snapshot_freq": 20,
+    "timesteps_per_batch": 2000,
+    "return_proc_mode": "centered_rank",
+    "episode_cutoff_mode": "env_default"
+  },
+  "env_target": "osim.env.run:RunEnv",
+  "env_params": {
+    "visualize" : false,
+    "max_obstacles" : 10
+  },
+  "exp_prefix": "osim_run",
+  "optimizer": {
+    "args": {
+      "stepsize": 0.01
+    },
+    "type": "adam"
+  },
+  "policy": {
+    "args": {
+      "ac_bins": "continuous:",
+      "ac_noise_std": 0.01,
+      "connection_type": "ff",
+      "hidden_dims": [
+        256,
+        256
+      ],
+      "nonlin_type": "tanh"
+    },
+    "type": "OsimRunnerPolicy"
+  }
+}
