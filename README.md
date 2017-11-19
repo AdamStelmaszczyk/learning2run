@@ -8,3 +8,4 @@ Main files:
 - [`baselines/baselines/pposgd/pposgd_simple.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/baselines/baselines/pposgd/pposgd_simple.py) observation processing for PPO  
 - [`example.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/example.py) to run keras-rl DDPG (with old observation processing)
 - [`es/localhost/launch.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/es/localhost/launch.py) to run Evolution Strategies
+- [`osim-rl/osim/env/run.py#L67`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/osim-rl/osim/env/run.py#L67) reward hacking
