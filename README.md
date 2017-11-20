@@ -9,3 +9,5 @@ Main files:
 - [`example.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/example.py) to run keras-rl DDPG (with old observation processing)
 - [`es/localhost/launch.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/es/localhost/launch.py) to run Evolution Strategies
 - [`osim-rl/osim/env/run.py#L67`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/osim-rl/osim/env/run.py#L67) reward hacking
+
+<img src="https://github.com/AdamStelmaszczyk/learning2run/blob/master/final.gif"/>
