@@ -13,3 +13,16 @@ Main files:
 - [`osim-rl/osim/env/run.py#L67`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/osim-rl/osim/env/run.py#L67) reward hacking
 
 <img src="https://github.com/AdamStelmaszczyk/learning2run/blob/master/final.gif"/>
+
+To cite this repository:
+
+```
+@misc{stelmaszczyk2017learning2run,
+    author = {Stelmaszczyk, Adam and Jarosik, Piotr},
+    title = "{Our NIPS 2017: Learning to Run approach}",
+    year = {2017},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/AdamStelmaszczyk/learning2run}},
+}
+```
