@@ -12,7 +12,9 @@ Main files:
 - [`es/localhost/launch.py`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/es/localhost/launch.py) to run Evolution Strategies
 - [`osim-rl/osim/env/run.py#L67`](https://github.com/AdamStelmaszczyk/learning2run/blob/master/osim-rl/osim/env/run.py#L67) reward hacking
 
+<p align="center">
 <img src="https://github.com/AdamStelmaszczyk/learning2run/blob/master/final.gif"/>
+</p>
 
 To cite this repository:
 
