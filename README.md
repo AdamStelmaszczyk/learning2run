@@ -1,4 +1,4 @@
-# Our NIPS 2017: Learning to Run approach
+# Our NIPS 2017: Learning to Run approach source code
 
 Where "our" refers to: Adam Stelmaszczyk, Piotr Jarosik
 
@@ -21,7 +21,7 @@ To cite this repository:
 ```
 @misc{stelmaszczyk2017learning2run,
     author = {Stelmaszczyk, Adam and Jarosik, Piotr},
-    title = "{Our NIPS 2017: Learning to Run approach}",
+    title = "{Our NIPS 2017: Learning to Run approach source code}",
     year = {2017},
     publisher = {GitHub},
     journal = {GitHub repository},
