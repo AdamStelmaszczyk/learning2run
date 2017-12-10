@@ -1,4 +1,4 @@
-# Our NIPS 2017: Learning to Run approach source code
+# Our NIPS 2017: Learning to Run source code
 
 Where "our" refers to: Adam Stelmaszczyk, Piotr Jarosik
 
