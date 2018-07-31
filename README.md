@@ -2,7 +2,7 @@
 
 Our approach write up: https://medium.com/@stelmaszczykadam/our-nips-2017-learning-to-run-approach-b80a295d3bb5
 
-All the solutions: https://arxiv.org/abs/1804.00361
+Other solutions: https://arxiv.org/abs/1804.00361
 
 Main files:
 
