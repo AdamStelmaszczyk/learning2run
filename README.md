@@ -1,5 +1,11 @@
 # Our NIPS 2017: Learning to Run source code
 
+Poster ([PDF](https://github.com/AdamStelmaszczyk/learning2run/blob/master/poster.pdf)):
+
+<p align="center">
+<img src="https://github.com/AdamStelmaszczyk/learning2run/blob/master/poster.png"/>
+</p>
+
 Our approach write up: https://medium.com/@stelmaszczykadam/our-nips-2017-learning-to-run-approach-b80a295d3bb5
 
 Other solutions: https://arxiv.org/abs/1804.00361
